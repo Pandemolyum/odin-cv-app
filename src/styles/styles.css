@@ -18,11 +18,15 @@ section.resume {
 }
 
 h2 {
-    margin-top: 0;
+    margin: 1rem 0;
 }
 
 h3 {
     margin: 0;
+}
+
+span.icon {
+    margin-left: 1rem;
 }
 
 div.textInput {
@@ -36,6 +40,17 @@ button {
     margin: 1rem 0;
     width: 100%;
     border-color: #a8a8a8;
+}
+
+button.toggle {
+    border: none;
+    background-color: #353535;
+    margin: 0 -2rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% + 4rem);
 }
 
 hr {
