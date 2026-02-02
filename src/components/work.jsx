@@ -22,7 +22,7 @@ export default function Work({ id, count }) {
             <div className="textInput">
                 <label htmlFor={"work" + count + "date"}>Date</label>
                 <input
-                    type="date"
+                    type="text"
                     id={"work" + count + "date"}
                     name={"work" + count + "date"}
                     placeholder="Jan 2025 - Now"

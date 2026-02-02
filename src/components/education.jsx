@@ -22,7 +22,7 @@ export default function Education({ id, count }) {
             <div className="textInput">
                 <label htmlFor={"educ" + count + "date"}>Date</label>
                 <input
-                    type="date"
+                    type="text"
                     id={"educ" + count + "date"}
                     name={"educ" + count + "date"}
                     placeholder="Jan 2023 - Dec 2025"

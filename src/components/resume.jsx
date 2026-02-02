@@ -8,11 +8,11 @@ export default function Resume({ submitData }) {
             phone: "555-555-5555",
             location: "City, Province",
             educ1degree: "Degree",
-            educ1date: "Date",
+            educ1date: "Jan 2023 - Dec 2025",
             educ1school: "Institution",
             work1title: "Title",
             work1company: "Company",
-            work1date: "Date",
+            work1date: "Jan 2025 - Now",
             work1desc: "• Description 1\n• Description 2\n• Description 3",
         };
     }
