@@ -8,6 +8,7 @@ section {
     border-radius: 1rem;
     padding: 1rem 3rem;
     margin-bottom: 1rem;
+    min-width: 408px;
 }
 
 section.resume {
@@ -15,6 +16,14 @@ section.resume {
     color: black;
     flex-grow: 2;
     width: 100%;
+}
+
+input {
+    width: 400px;
+}
+
+textarea {
+    height: 5rem;
 }
 
 h2 {
@@ -55,6 +64,7 @@ button.toggle {
 
 hr {
     border-color: #a8a8a8;
+    margin: 1rem 0;
 }
 
 p {

@@ -39,6 +39,19 @@ export default function Form({ handleSubmit }) {
     const [showWork, setShowWork] = useState(true);
     const toggleWork = () => setShowWork(!showWork);
 
+    const bioStyle = {
+        display: showBio ? "flex" : "none",
+        flexDirection: "column",
+    };
+    const educStyle = {
+        display: showEduc ? "flex" : "none",
+        flexDirection: "column",
+    };
+    const workStyle = {
+        display: showWork ? "flex" : "none",
+        flexDirection: "column",
+    };
+
     return (
         <form action="submit" onSubmit={handleSubmit}>
             <section>
@@ -46,75 +59,67 @@ export default function Form({ handleSubmit }) {
                     <h2>Bio</h2>
                     <Icon path={mdiMenuDown} size={1} />
                 </button>
-                {showBio && (
-                    <>
-                        <div className="textInput">
-                            <label htmlFor="fullname">Full Name</label>
-                            <input
-                                type="text"
-                                id="fullname"
-                                name="fullname"
-                                placeholder="Full Name"
-                            />
-                        </div>
-                        <div className="textInput">
-                            <label htmlFor="email">Email Address</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="example@domain.com"
-                            />
-                        </div>
-                        <div className="textInput">
-                            <label htmlFor="phone">Phone Number</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="555-555-5555"
-                            />
-                        </div>
-                        <div className="textInput">
-                            <label htmlFor="location">Location / Address</label>
-                            <input
-                                type="text"
-                                id="location"
-                                name="location"
-                                placeholder="City, Province"
-                            />
-                        </div>
-                    </>
-                )}
+
+                <div className="inputGroup" style={bioStyle}>
+                    <div className="textInput">
+                        <label htmlFor="fullname">Full Name</label>
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Full Name"
+                        />
+                    </div>
+                    <div className="textInput">
+                        <label htmlFor="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@domain.com"
+                        />
+                    </div>
+                    <div className="textInput">
+                        <label htmlFor="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="555-555-5555"
+                        />
+                    </div>
+                    <div className="textInput">
+                        <label htmlFor="location">Location / Address</label>
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="City, Province"
+                        />
+                    </div>
+                </div>
             </section>
             <section>
                 <button className="toggle" onClick={toggleEduc}>
                     <h2>Education</h2>
                     <Icon path={mdiMenuDown} size={1} />
                 </button>
-                {showEduc && (
-                    <>
-                        {education.map((item) => item)}
-                        <AddButton text="Add Education" onClick={addEduc} />
-                    </>
-                )}
+                <div className="inputGroup" style={educStyle}>
+                    {education.map((item) => item)}
+                    <AddButton text="Add Education" onClick={addEduc} />
+                </div>
             </section>
             <section>
                 <button className="toggle" onClick={toggleWork}>
                     <h2>Work Experience</h2>
                     <Icon path={mdiMenuDown} size={1} />
                 </button>
-                {showWork && (
-                    <>
-                        {work.map((item) => item)}
-                        <AddButton
-                            text="Add Work Experience"
-                            onClick={addWork}
-                        />
-                    </>
-                )}
+                <div className="inputGroup" style={workStyle}>
+                    {work.map((item) => item)}
+                    <AddButton text="Add Work Experience" onClick={addWork} />
+                </div>
             </section>
-            <button type="submit">Submit</button>
+            <button type="submit">Update Resume</button>
         </form>
     );
 }
