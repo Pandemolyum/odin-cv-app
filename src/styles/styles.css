@@ -1,0 +1,39 @@
+div.hflex {
+    display: flex;
+    gap: 3rem;
+}
+
+section {
+    background-color: rgb(17, 17, 17);
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+}
+
+section.resume {
+    background-color: #fff;
+    color: black;
+    flex-grow: 2;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+div.textInput {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin: 1rem 0;
+    width: 100%;
+    border-color: #a8a8a8;
+}
+
+hr {
+    border-color: #a8a8a8;
+}

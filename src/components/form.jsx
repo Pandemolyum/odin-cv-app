@@ -26,8 +26,6 @@ export default function Form() {
         <form action="submit" onSubmit={handleSubmit}>
             <section>
                 <h2>Bio</h2>
-                <hr />
-                <hr />
                 <div className="textInput">
                     <label htmlFor="fullname">Full Name</label>
                     <input type="text" id="fullname" name="fullname" />
@@ -46,20 +44,12 @@ export default function Form() {
                 </div>
             </section>
             <section>
-                <hr />
-                <hr />
                 <h2>Education</h2>
-                <hr />
-                <hr />
                 {education.map((item) => item)}
                 <AddButton text="Add Education" onClick={addEduc} />
             </section>
             <section>
-                <hr />
-                <hr />
                 <h2>Work Experience</h2>
-                <hr />
-                <hr />
                 {work.map((item) => item)}
                 <AddButton text="Add Work Experience" onClick={addWork} />
             </section>

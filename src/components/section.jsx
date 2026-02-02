@@ -1,3 +1,3 @@
 export default function Section({ children }) {
-    return <section>{children}</section>;
+    return <section className="resume">{children}</section>;
 }

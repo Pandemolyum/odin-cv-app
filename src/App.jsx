@@ -5,16 +5,17 @@ import Contact from "./components/contact.jsx";
 
 function App() {
     return (
-        <>
+        <div className="hflex">
             <div>
                 <Form></Form>
             </div>
+            <hr />
             <div>
                 <Section>
                     <Contact />
                 </Section>
             </div>
-        </>
+        </div>
     );
 }
 
