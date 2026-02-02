@@ -37,7 +37,8 @@ export default function Resume({ submitData }) {
             <div className="contact">
                 <h1>{submitData.fullname}</h1>
                 <span>
-                    {submitData.email} ✦ {submitData.phone} ✦{" "}
+                    {submitData.email}&emsp;✦&emsp;{submitData.phone}
+                    &emsp;✦&emsp;
                     {submitData.location}
                 </span>
             </div>
@@ -58,10 +59,10 @@ export default function Resume({ submitData }) {
 function Educ({ degree, date, school }) {
     return (
         <div className="educ">
-            <p>
-                <span>{degree}</span>
+            <div className="sectionTitle">
+                <h3>{degree}</h3>
                 <span>{date}</span>
-            </p>
+            </div>
             <p>{school}</p>
         </div>
     );
@@ -70,10 +71,10 @@ function Educ({ degree, date, school }) {
 function Work({ company, date, title, description }) {
     return (
         <div className="work">
-            <p>
-                <span>{title}</span>
+            <div className="sectionTitle">
+                <h3>{title}</h3>
                 <span>{date}</span>
-            </p>
+            </div>
             <p>{company}</p>
             <p>{description}</p>
         </div>

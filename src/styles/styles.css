@@ -21,6 +21,10 @@ h2 {
     margin-top: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 div.textInput {
     display: flex;
     flex-direction: column;
@@ -36,4 +40,20 @@ button {
 
 hr {
     border-color: #a8a8a8;
+}
+
+p {
+    line-height: 1.15;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+p:last-child {
+    margin-bottom: 2rem;
+}
+
+div.sectionTitle {
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
 }
