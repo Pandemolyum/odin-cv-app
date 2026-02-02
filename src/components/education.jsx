@@ -1,17 +1,29 @@
-export default function Education({ id }) {
+export default function Education({ id, count }) {
     return (
         <div id={id}>
             <div className="textInput">
-                <label htmlFor="degree">Degree</label>
-                <input type="text" id="degree" name="degree" />
+                <label htmlFor={"educ" + count + "degree"}>Degree</label>
+                <input
+                    type="text"
+                    id={"educ" + count + "degree"}
+                    name={"educ" + count + "degree"}
+                />
             </div>
             <div className="textInput">
-                <label htmlFor="school">School</label>
-                <input type="text" id="school" name="school" />
+                <label htmlFor={"educ" + count + "school"}>School</label>
+                <input
+                    type="text"
+                    id={"educ" + count + "school"}
+                    name={"educ" + count + "school"}
+                />
             </div>
             <div className="textInput">
-                <label htmlFor="date">Date</label>
-                <input type="date" id="date" name="date" />
+                <label htmlFor={"educ" + count + "date"}>Date</label>
+                <input
+                    type="date"
+                    id={"educ" + count + "date"}
+                    name={"educ" + count + "date"}
+                />
             </div>
             <hr />
         </div>

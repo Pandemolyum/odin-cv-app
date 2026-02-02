@@ -3,24 +3,30 @@ import Education from "./education.jsx";
 import { Work } from "./work.jsx";
 import AddButton from "./button.jsx";
 
-function createEducItem() {
-    const id = crypto.randomUUID();
-    return <Education id={id} />;
-}
+export default function Form({ handleSubmit }) {
+    function createEducItem(countEduc) {
+        const id = "educ" + countEduc;
+        return <Education id={id} count={countEduc} />;
+    }
 
-function createWorkItem() {
-    const id = crypto.randomUUID();
-    return <Work id={id} />;
-}
+    function createWorkItem(countWork) {
+        const id = "educ" + countWork;
+        return <Work id={id} count={countWork} />;
+    }
 
-export default function Form() {
-    const handleSubmit = (e) => e.preventDefault();
+    let countEduc = 1;
+    const [education, setEducation] = useState([createEducItem(countEduc)]);
+    const addEduc = (e) => {
+        e.preventDefault();
+        setEducation([...education, createEducItem(education.length + 1)]);
+    };
 
-    const [education, setEducation] = useState([createEducItem()]);
-    const addEduc = () => setEducation([...education, createEducItem()]);
-
-    const [work, setWork] = useState([createWorkItem()]);
-    const addWork = () => setWork([...work, createWorkItem()]);
+    let countWork = 1;
+    const [work, setWork] = useState([createWorkItem(countWork)]);
+    const addWork = (e) => {
+        e.preventDefault();
+        setWork([...work, createWorkItem(work.length + 1)]);
+    };
 
     return (
         <form action="submit" onSubmit={handleSubmit}>
@@ -53,7 +59,7 @@ export default function Form() {
                 {work.map((item) => item)}
                 <AddButton text="Add Work Experience" onClick={addWork} />
             </section>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form>
     );
 }

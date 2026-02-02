@@ -15,24 +15,38 @@ function createJobItem() {
     return <JobDescription id={id} />;
 }
 
-function Work({ id }) {
+function Work({ id, count }) {
     const [description, setDescription] = useState([createJobItem()]);
-    const addDescription = () =>
+    const addDescription = (e) => {
+        e.preventDefault();
         setDescription([...description, createJobItem()]);
+    };
 
     return (
         <div id={id}>
             <div className="textInput">
-                <label htmlFor="degree">Job Title</label>
-                <input type="text" id="degree" name="degree" />
+                <label htmlFor={"work" + count + "title"}>Job Title</label>
+                <input
+                    type="text"
+                    id={"work" + count + "title"}
+                    name={"work" + count + "title"}
+                />
             </div>
             <div className="textInput">
-                <label htmlFor="school">Company</label>
-                <input type="text" id="school" name="school" />
+                <label htmlFor={"work" + count + "company"}>Company</label>
+                <input
+                    type="text"
+                    id={"work" + count + "company"}
+                    name={"work" + count + "company"}
+                />
             </div>
             <div className="textInput">
-                <label htmlFor="date">Date</label>
-                <input type="date" id="date" name="date" />
+                <label htmlFor={"work" + count + "date"}>Date</label>
+                <input
+                    type="date"
+                    id={"work" + count + "date"}
+                    name={"work" + count + "date"}
+                />
             </div>
             {description.map((index) => index)}
             <AddButton text="Add Description" onClick={addDescription} />
