@@ -7,6 +7,7 @@ export default function Work({ id, count }) {
                     type="text"
                     id={"work" + count + "title"}
                     name={"work" + count + "title"}
+                    placeholder="Title"
                 />
             </div>
             <div className="textInput">
@@ -15,6 +16,7 @@ export default function Work({ id, count }) {
                     type="text"
                     id={"work" + count + "company"}
                     name={"work" + count + "company"}
+                    placeholder="Company"
                 />
             </div>
             <div className="textInput">
@@ -23,6 +25,7 @@ export default function Work({ id, count }) {
                     type="date"
                     id={"work" + count + "date"}
                     name={"work" + count + "date"}
+                    placeholder="Jan 2025 - Now"
                 />
             </div>
             <div className="textInput">
@@ -30,6 +33,7 @@ export default function Work({ id, count }) {
                 <textarea
                     id={"work" + count + "desc"}
                     name={"work" + count + "desc"}
+                    placeholder="• Description 1&#10;• Description 2&#10;• Description 3"
                 />
             </div>
             <hr />

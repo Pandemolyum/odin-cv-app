@@ -2,34 +2,46 @@ export default function Resume({ submitData }) {
     let educ = [];
     let work = [];
     if (submitData === null) {
-        return null;
-    } else {
-        let count = 1;
-        while (submitData["educ" + count + "degree"]) {
-            educ = [
-                ...educ,
-                <Educ
-                    degree={submitData["educ" + count + "degree"]}
-                    date={submitData["educ" + count + "date"]}
-                    school={submitData["educ" + count + "school"]}
-                />,
-            ];
-            count++;
-        }
+        submitData = {
+            fullname: "Full Name",
+            email: "example@domain.com",
+            phone: "555-555-5555",
+            location: "City, Province",
+            educ1degree: "Degree",
+            educ1date: "Date",
+            educ1school: "Institution",
+            work1title: "Title",
+            work1company: "Company",
+            work1date: "Date",
+            work1desc: "• Description 1\n• Description 2\n• Description 3",
+        };
+    }
 
-        count = 1;
-        while (submitData["work" + count + "title"]) {
-            work = [
-                ...work,
-                <Work
-                    company={submitData["work" + count + "company"]}
-                    date={submitData["work" + count + "date"]}
-                    title={submitData["work" + count + "title"]}
-                    description={submitData["work" + count + "desc"]}
-                />,
-            ];
-            count++;
-        }
+    let count = 1;
+    while (submitData["educ" + count + "degree"]) {
+        educ = [
+            ...educ,
+            <Educ
+                degree={submitData["educ" + count + "degree"]}
+                date={submitData["educ" + count + "date"]}
+                school={submitData["educ" + count + "school"]}
+            />,
+        ];
+        count++;
+    }
+
+    count = 1;
+    while (submitData["work" + count + "title"]) {
+        work = [
+            ...work,
+            <Work
+                company={submitData["work" + count + "company"]}
+                date={submitData["work" + count + "date"]}
+                title={submitData["work" + count + "title"]}
+                description={submitData["work" + count + "desc"]}
+            />,
+        ];
+        count++;
     }
 
     return (

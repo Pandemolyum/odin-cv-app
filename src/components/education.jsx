@@ -7,6 +7,7 @@ export default function Education({ id, count }) {
                     type="text"
                     id={"educ" + count + "degree"}
                     name={"educ" + count + "degree"}
+                    placeholder="Degree"
                 />
             </div>
             <div className="textInput">
@@ -15,6 +16,7 @@ export default function Education({ id, count }) {
                     type="text"
                     id={"educ" + count + "school"}
                     name={"educ" + count + "school"}
+                    placeholder="Institution"
                 />
             </div>
             <div className="textInput">
@@ -23,6 +25,7 @@ export default function Education({ id, count }) {
                     type="date"
                     id={"educ" + count + "date"}
                     name={"educ" + count + "date"}
+                    placeholder="Jan 2023 - Dec 2025"
                 />
             </div>
             <hr />

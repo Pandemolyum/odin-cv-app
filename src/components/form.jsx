@@ -34,19 +34,39 @@ export default function Form({ handleSubmit }) {
                 <h2>Bio</h2>
                 <div className="textInput">
                     <label htmlFor="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" />
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Full Name"
+                    />
                 </div>
                 <div className="textInput">
                     <label htmlFor="email">Email Address</label>
-                    <input type="email" id="email" name="email" />
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@domain.com"
+                    />
                 </div>
                 <div className="textInput">
                     <label htmlFor="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" />
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="555-555-5555"
+                    />
                 </div>
                 <div className="textInput">
                     <label htmlFor="location">Location / Address</label>
-                    <input type="text" id="location" name="location" />
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="City, Province"
+                    />
                 </div>
             </section>
             <section>
