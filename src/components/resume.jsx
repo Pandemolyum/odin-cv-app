@@ -25,6 +25,7 @@ export default function Resume({ submitData }) {
                     company={submitData["work" + count + "company"]}
                     date={submitData["work" + count + "date"]}
                     title={submitData["work" + count + "title"]}
+                    description={submitData["work" + count + "desc"]}
                 />,
             ];
             count++;
@@ -66,7 +67,7 @@ function Educ({ degree, date, school }) {
     );
 }
 
-function Work({ company, date, title }) {
+function Work({ company, date, title, description }) {
     return (
         <div className="work">
             <p>
@@ -74,6 +75,7 @@ function Work({ company, date, title }) {
                 <span>{date}</span>
             </p>
             <p>{company}</p>
+            <p>{description}</p>
         </div>
     );
 }

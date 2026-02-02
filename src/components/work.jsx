@@ -1,27 +1,4 @@
-import { useState } from "react";
-import AddButton from "./button.jsx";
-
-function JobDescription({ id }) {
-    return (
-        <div id={id} className="textInput">
-            <label htmlFor="jobDescription">Description</label>
-            <input type="text" id="jobDescription" name="jobDescription" />
-        </div>
-    );
-}
-
-function createJobItem() {
-    const id = crypto.randomUUID();
-    return <JobDescription id={id} />;
-}
-
-function Work({ id, count }) {
-    const [description, setDescription] = useState([createJobItem()]);
-    const addDescription = (e) => {
-        e.preventDefault();
-        setDescription([...description, createJobItem()]);
-    };
-
+export default function Work({ id, count }) {
     return (
         <div id={id}>
             <div className="textInput">
@@ -48,11 +25,14 @@ function Work({ id, count }) {
                     name={"work" + count + "date"}
                 />
             </div>
-            {description.map((index) => index)}
-            <AddButton text="Add Description" onClick={addDescription} />
+            <div className="textInput">
+                <label htmlFor={"work" + count + "desc"}>Description</label>
+                <textarea
+                    id={"work" + count + "desc"}
+                    name={"work" + count + "desc"}
+                />
+            </div>
             <hr />
         </div>
     );
 }
-
-export { Work, JobDescription };

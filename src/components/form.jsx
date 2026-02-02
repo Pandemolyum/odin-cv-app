@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Education from "./education.jsx";
-import { Work } from "./work.jsx";
+import Work from "./work.jsx";
 import AddButton from "./button.jsx";
 
 export default function Form({ handleSubmit }) {
