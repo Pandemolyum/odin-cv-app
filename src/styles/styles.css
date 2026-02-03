@@ -9,6 +9,7 @@ section {
     padding: 1rem 3rem;
     margin-bottom: 1rem;
     min-width: 408px;
+    transition: 1s;
 }
 
 section.resume {

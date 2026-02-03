@@ -52,12 +52,22 @@ export default function Form({ handleSubmit }) {
         flexDirection: "column",
     };
 
+    const arrowClass = "toggleArrow";
+    const bioArrowRotation = showBio ? 0 : -90;
+    const educArrowRotation = showEduc ? 0 : -90;
+    const workArrowRotation = showWork ? 0 : -90;
+
     return (
         <form action="submit" onSubmit={handleSubmit}>
             <section>
                 <button className="toggle" onClick={toggleBio}>
                     <h2>Bio</h2>
-                    <Icon path={mdiMenuDown} size={1} />
+                    <Icon
+                        className={arrowClass}
+                        path={mdiMenuDown}
+                        size={1.5}
+                        rotate={bioArrowRotation}
+                    />
                 </button>
 
                 <div className="inputGroup" style={bioStyle}>
@@ -102,7 +112,12 @@ export default function Form({ handleSubmit }) {
             <section>
                 <button className="toggle" onClick={toggleEduc}>
                     <h2>Education</h2>
-                    <Icon path={mdiMenuDown} size={1} />
+                    <Icon
+                        className={arrowClass}
+                        path={mdiMenuDown}
+                        size={1.5}
+                        rotate={educArrowRotation}
+                    />
                 </button>
                 <div className="inputGroup" style={educStyle}>
                     {education.map((item) => item)}
@@ -112,7 +127,12 @@ export default function Form({ handleSubmit }) {
             <section>
                 <button className="toggle" onClick={toggleWork}>
                     <h2>Work Experience</h2>
-                    <Icon path={mdiMenuDown} size={1} />
+                    <Icon
+                        className={arrowClass}
+                        path={mdiMenuDown}
+                        size={1.5}
+                        rotate={workArrowRotation}
+                    />
                 </button>
                 <div className="inputGroup" style={workStyle}>
                     {work.map((item) => item)}
